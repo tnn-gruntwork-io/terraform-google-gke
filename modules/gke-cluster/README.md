@@ -10,12 +10,12 @@ to the cluster module.
 
 ## How do you use this module?
 
-* See the [root README](https://github.com/gruntwork-io/terraform-google-gke/blob/master/README.md) for instructions on
+* See the [root README](https://github.com/tnn-gruntwork-io/terraform-google-gke/blob/master/README.md) for instructions on
 using Terraform modules.
-* See the [examples](https://github.com/gruntwork-io/terraform-google-gke/tree/master/examples) folder for example usage.
-* See [variables.tf](https://github.com/gruntwork-io/terraform-google-gke/blob/master/modules/gke-cluster/variables.tf) for all the
+* See the [examples](https://github.com/tnn-gruntwork-io/terraform-google-gke/tree/master/examples) folder for example usage.
+* See [variables.tf](https://github.com/tnn-gruntwork-io/terraform-google-gke/blob/master/modules/gke-cluster/variables.tf) for all the
 variables you can set on this module.
-* See [outputs.tf](https://github.com/gruntwork-io/terraform-google-gke/blob/master/modules/gke-cluster/outputs.tf) for all the variables
+* See [outputs.tf](https://github.com/tnn-gruntwork-io/terraform-google-gke/blob/master/modules/gke-cluster/outputs.tf) for all the variables
 that are outputted by this module.
 
 ## What is a GKE Cluster?
@@ -53,7 +53,7 @@ You must explicitly specify the network and subnetwork of your GKE cluster using
 the `network` and `subnetwork` fields; this module will not implicitly use the
 `default` network with an automatically generated subnetwork.
 
-The modules in the [`terraform-google-network`](https://github.com/gruntwork-io/terraform-google-network)
+The modules in the [`terraform-google-network`](https://github.com/tnn-gruntwork-io/terraform-google-network)
 Gruntwork module are a useful tool for configuring your VPC network and 
 subnetworks in GCP.
 
@@ -63,7 +63,7 @@ A VPC-native cluster is a GKE Cluster that uses [alias IP ranges](https://cloud.
 it allocates IP addresses from a block known to GCP. When using an alias range, pod addresses are natively routable
 within GCP, and VPC networks can ensure that the IP range the cluster uses is reserved.
 
-While using a secondary IP range is recommended [in order to to separate cluster master and pod IPs](https://github.com/gruntwork-io/terraform-google-network/tree/master/modules/vpc-network#how-is-a-secondary-range-connected-to-an-alias-ip-range),
+While using a secondary IP range is recommended [in order to to separate cluster master and pod IPs](https://github.com/tnn-gruntwork-io/terraform-google-network/tree/master/modules/vpc-network#how-is-a-secondary-range-connected-to-an-alias-ip-range),
 when using a network in the same project as your GKE cluster you can specify a blank range name to draw alias IPs from your subnetwork's primary IP range. If
 using a shared VPC network (a network from another GCP project) using an explicit secondary range is required.
 
