@@ -6,7 +6,7 @@ If you wish to be the maintainer for this project, we are open to considering th
 
 ---
 
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/gruntwork-io/terraform-google-gke.svg?label=latest)](https://github.com/gruntwork-io/terraform-google-gke/releases/latest)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/tnn-gruntwork-io/terraform-google-gke.svg?label=latest)](https://github.com/tnn-gruntwork-io/terraform-google-gke/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D1.0.x-blue.svg)
 
 # Google Kubernetes Engine (GKE) Module
@@ -17,35 +17,35 @@ using [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engin
 ## Quickstart
 
 If you want to quickly spin up a GKE Public Cluster, you can run the example that is in the root of this
-repo. Check out the [gke-basic-helm example documentation](https://github.com/gruntwork-io/terraform-google-gke/blob/master/examples/gke-basic-helm)
+repo. Check out the [gke-basic-helm example documentation](https://github.com/tnn-gruntwork-io/terraform-google-gke/blob/master/examples/gke-basic-helm)
 for instructions.
 
 ## What's in this repo
 
 This repo has the following folder structure:
 
-- [root](https://github.com/gruntwork-io/terraform-google-gke/tree/master): The root folder contains an example of how
-  to deploy a GKE Public Cluster with an example chart with [Helm](https://helm.sh/). See [gke-basic-helm](https://github.com/gruntwork-io/terraform-google-gke/blob/master/examples/gke-basic-helm)
+- [root](https://github.com/tnn-gruntwork-io/terraform-google-gke/tree/master): The root folder contains an example of how
+  to deploy a GKE Public Cluster with an example chart with [Helm](https://helm.sh/). See [gke-basic-helm](https://github.com/tnn-gruntwork-io/terraform-google-gke/blob/master/examples/gke-basic-helm)
   for the documentation.
 
-- [modules](https://github.com/gruntwork-io/terraform-google-gke/tree/master/modules): This folder contains the
+- [modules](https://github.com/tnn-gruntwork-io/terraform-google-gke/tree/master/modules): This folder contains the
   main implementation code for this Module, broken down into multiple standalone submodules.
 
   The primary module is:
 
-  - [gke-cluster](https://github.com/gruntwork-io/terraform-google-gke/tree/master/modules/gke-cluster): The GKE Cluster module is used to
+  - [gke-cluster](https://github.com/tnn-gruntwork-io/terraform-google-gke/tree/master/modules/gke-cluster): The GKE Cluster module is used to
     administer the [cluster master](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture)
     for a [GKE Cluster](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-admin-overview).
 
   There are also several supporting modules that add extra functionality on top of `gke-cluster`:
 
-  - [gke-service-account](https://github.com/gruntwork-io/terraform-google-gke/tree/master/modules/gke-service-account):
+  - [gke-service-account](https://github.com/tnn-gruntwork-io/terraform-google-gke/tree/master/modules/gke-service-account):
     Used to configure a GCP service account for use with a GKE cluster.
 
-- [examples](https://github.com/gruntwork-io/terraform-google-gke/tree/master/examples): This folder contains
+- [examples](https://github.com/tnn-gruntwork-io/terraform-google-gke/tree/master/examples): This folder contains
   examples of how to use the submodules.
 
-- [test](https://github.com/gruntwork-io/terraform-google-gke/tree/master/test): Automated tests for the submodules
+- [test](https://github.com/tnn-gruntwork-io/terraform-google-gke/tree/master/test): Automated tests for the submodules
   and examples.
 
 ## What is Kubernetes?
@@ -119,13 +119,13 @@ Gruntwork can help with:
 
 ## How do I contribute to this Module?
 
-Contributions are very welcome! Check out the [Contribution Guidelines](https://github.com/gruntwork-io/terraform-google-gke/blob/master/CONTRIBUTING.md)
+Contributions are very welcome! Check out the [Contribution Guidelines](https://github.com/tnn-gruntwork-io/terraform-google-gke/blob/master/CONTRIBUTING.md)
 for instructions.
 
 ## How is this Module versioned?
 
 This Module follows the principles of [Semantic Versioning](http://semver.org/). You can find each new release, along
-with the changelog, in the [Releases Page](https://github.com/gruntwork-io/terraform-google-gke/releases).
+with the changelog, in the [Releases Page](https://github.com/tnn-gruntwork-io/terraform-google-gke/releases).
 
 During initial development, the major version will be 0 (e.g., `0.x.y`), which indicates the code does not yet have a
 stable API. Once we hit `1.0.0`, we will make every effort to maintain a backwards compatible API and use the MAJOR,
@@ -133,7 +133,7 @@ MINOR, and PATCH versions on each release to indicate any incompatibilities.
 
 ## License
 
-Please see [LICENSE](https://github.com/gruntwork-io/terraform-google-gke/blob/master/LICENSE) for how the code in this
+Please see [LICENSE](https://github.com/tnn-gruntwork-io/terraform-google-gke/blob/master/LICENSE) for how the code in this
 repo is licensed.
 
 Copyright &copy; 2020 Gruntwork, Inc.

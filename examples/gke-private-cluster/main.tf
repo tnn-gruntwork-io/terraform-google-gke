@@ -42,7 +42,7 @@ provider "google-beta" {
 module "gke_cluster" {
   # When using these modules in your own templates, you will need to use a Git URL with a ref attribute that pins you
   # to a specific version of the modules, such as the following example:
-  # source = "github.com/gruntwork-io/terraform-google-gke.git//modules/gke-cluster?ref=v0.2.0"
+  # source = "github.com/tnn-gruntwork-io/terraform-google-gke.git//modules/gke-cluster?ref=v0.2.0"
   source = "../../modules/gke-cluster"
 
   name = var.cluster_name
@@ -53,7 +53,7 @@ module "gke_cluster" {
 
   # We're deploying the cluster in the 'public' subnetwork to allow outbound internet access
   # See the network access tier table for full details:
-  # https://github.com/gruntwork-io/terraform-google-network/tree/master/modules/vpc-network#access-tier
+  # https://github.com/tnn-gruntwork-io/terraform-google-network/tree/master/modules/vpc-network#access-tier
   subnetwork                    = module.vpc_network.public_subnetwork
   cluster_secondary_range_name  = module.vpc_network.public_subnetwork_secondary_range_name
   services_secondary_range_name = module.vpc_network.public_services_secondary_range_name
@@ -120,7 +120,7 @@ resource "google_container_node_pool" "node_pool" {
     }
 
     # Add a private tag to the instances. See the network access tier table for full details:
-    # https://github.com/gruntwork-io/terraform-google-network/tree/master/modules/vpc-network#access-tier
+    # https://github.com/tnn-gruntwork-io/terraform-google-network/tree/master/modules/vpc-network#access-tier
     tags = [
       module.vpc_network.private,
       "private-pool-example",
@@ -155,7 +155,7 @@ resource "google_container_node_pool" "node_pool" {
 module "gke_service_account" {
   # When using these modules in your own templates, you will need to use a Git URL with a ref attribute that pins you
   # to a specific version of the modules, such as the following example:
-  # source = "github.com/gruntwork-io/terraform-google-gke.git//modules/gke-service-account?ref=v0.2.0"
+  # source = "github.com/tnn-gruntwork-io/terraform-google-gke.git//modules/gke-service-account?ref=v0.2.0"
   source = "../../modules/gke-service-account"
 
   name        = var.cluster_service_account_name
@@ -168,7 +168,7 @@ module "gke_service_account" {
 # ---------------------------------------------------------------------------------------------------------------------
 
 module "vpc_network" {
-  source = "github.com/gruntwork-io/terraform-google-network.git//modules/vpc-network?ref=v0.8.2"
+  source = "github.com/tnn-gruntwork-io/terraform-google-network.git//modules/vpc-network?ref=v0.8.2"
 
   name_prefix = "${var.cluster_name}-network-${random_string.suffix.result}"
   project     = var.project
